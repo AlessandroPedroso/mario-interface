@@ -2,10 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Mukta", sans-serif;
 }
 
 body {
     height: 100dvh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+header > img {
+    width: 60px;
+}
+
+header > a{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header > a:hover{
+    color: #C51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+    /* transition: 1s color ease-in-out; */
 }
 
 main {
@@ -32,7 +58,15 @@ button {
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 30px;
+    transition: 0.5s ease-in;
 }
+
+button:hover{
+    background-color: #009323;
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
 
 .imagem-mario-luigi {
     height: 400px;
@@ -53,7 +87,10 @@ button {
 }
 
 video {
-    width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .mascara{
@@ -74,3 +111,60 @@ video {
     bottom: 20px;
     right: 20px;
 }
+
+.formulario-fale-conosco{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+
+    position: fixed;
+    top: 30%;
+    left: -300px;
+
+    transition: left 1s ease-in-out;
+}
+
+input{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F;
+}
+
+textarea{
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F;
+
+}
+
+.mascara-formulario{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+}
+
+/*
+    INICIAL
+    top:30%;
+    lef:-300px;
+*/
+
+/*
+    FINAL
+    left: 50%;
+    transform: translateX(-50%);
+*/
